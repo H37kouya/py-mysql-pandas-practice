@@ -23,6 +23,7 @@ RUN pip install --no-cache-dir \
     scipy \
     matplotlib \
     japanize_matplotlib \
-    requests
+    requests \
+    mysql-connector-python
 
 WORKDIR /work/src
