@@ -1,0 +1,14 @@
+version: "3.8"
+services:
+  python:
+    build: ./infra/docker/python
+    tty: true
+    volumes:
+      - ./src:/work/src
+
+  db:
+    build: ./infra/docker/mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./infra/docker/mysql/db:/var/lib/mysql
